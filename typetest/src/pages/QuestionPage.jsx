@@ -44,7 +44,7 @@ const QuestionPage = () => {
         <QuestionItem
           key={currentQuestionIndex}
           data={questions[currentQuestionIndex]} // 현재 질문
-          currentQuestionNumber={currentQuestionIndex}
+          currentQuestionNumber={currentQuestionIndex} // 현재 질문 번호
           onAnswer={handleAnswer}
         />
       )}
