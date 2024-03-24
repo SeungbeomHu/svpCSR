@@ -18,9 +18,7 @@ const MainPage = () => {
       {!testMode ? (
         <>
           <Title>내 직장 상사의 유형은?</Title>
-          <Button onClick={testStart}>
-            <p>테스트 시작하기</p>
-          </Button>
+          <Button onClick={testStart}>테스트 시작하기</Button>
         </>
       ) : (
         <QuestionPage />
