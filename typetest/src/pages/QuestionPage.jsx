@@ -39,15 +39,16 @@ const QuestionPage = () => {
   }
 
   return (
-    <div>
+    <>
       {questions.length > 0 && currentQuestionIndex < questions.length && (
         <QuestionItem
           key={currentQuestionIndex}
           data={questions[currentQuestionIndex]} // 현재 질문
+          currentQuestionNumber={currentQuestionIndex}
           onAnswer={handleAnswer}
         />
       )}
-    </div>
+    </>
   )
 }
 

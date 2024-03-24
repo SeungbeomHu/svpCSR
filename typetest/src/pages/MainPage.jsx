@@ -14,18 +14,16 @@ const MainPage = () => {
   }
 
   return (
-    <>
+    <Container>
       {!testMode ? (
-        <Container justifyContent={"space-around"}>
-          <Title>내 직장 상사의 유형은?</Title>
+        <>
+          <Title>내 상사의 유형은?</Title>
           <Button onClick={testStart}>테스트 시작하기</Button>
-        </Container>
+        </>
       ) : (
-        <Container justifyContent={"center"}>
-          <QuestionPage />
-        </Container>
+        <QuestionPage />
       )}
-    </>
+    </Container>
   )
 }
 

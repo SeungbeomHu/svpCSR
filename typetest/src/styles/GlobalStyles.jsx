@@ -3,13 +3,13 @@ import styled from "styled-components"
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: ${(props) => props.justifyContent};
+  justify-content: center;
   align-items: center;
   margin: 0 auto;
   height: 100vh;
   width: 100%;
   max-width: 500px;
-  background-color: #f0f0f0;
+  background-color: white;
 
   @media (max-width: 500px) {
     max-width: 100%;
@@ -17,8 +17,9 @@ export const Container = styled.div`
   }
 `
 
-export const Button = styled.button`
+export const Button = styled.div`
   width: 80%;
+  text-align: center;
   padding: 15px 10px;
   border-radius: 10px;
   border: 2px solid transparent;
