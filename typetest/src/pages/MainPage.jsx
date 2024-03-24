@@ -8,8 +8,9 @@ const MainPage = () => {
   // 테스트 시작 여부
   const [testMode, setTestMode] = useState(false)
 
+  // 테스트 시작 함수
   const testStart = () => {
-    setTestMode(true)
+    setTestMode(true) // 질문 페이지로 이동
   }
 
   return (
