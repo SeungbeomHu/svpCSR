@@ -19,7 +19,7 @@ export const AnswerBox = styled.div`
   justify-content: center;
   margin: 5px;
   padding: 20px 15px;
-  border-radius: 30px;
+  border-radius: 10px;
   border: 2px solid transparent;
   background-color: blueviolet;
   color: white;

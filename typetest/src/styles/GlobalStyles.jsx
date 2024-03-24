@@ -20,6 +20,7 @@ export const Container = styled.div`
 export const Button = styled.div`
   width: 80%;
   text-align: center;
+  margin: 10px 0px;
   padding: 15px 10px;
   border-radius: 10px;
   border: 2px solid transparent;

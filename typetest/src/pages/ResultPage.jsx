@@ -1,7 +1,13 @@
 import React from "react"
 import { useLocation, useNavigate } from "react-router-dom"
-import { Button, Container } from "../styles/GlobalStyles"
+import { Button } from "../styles/GlobalStyles"
 import results from "../data/results"
+import {
+  Description,
+  ImgBox,
+  ResultPageContainer,
+  Title,
+} from "../styles/ResultPageStyles"
 
 const ResultPage = () => {
   const navigate = useNavigate()
@@ -9,7 +15,6 @@ const ResultPage = () => {
 
   // 유형 및 설명 데이터
   const typesData = results
-  console.log(typesData)
 
   // 상태가 없는 경우를 대비하여 빈 객체({})를 기본값으로 설정(향후 테스트 메인페이지로 다시 전환)
   const { types } = location.state || {}
@@ -39,11 +44,10 @@ const ResultPage = () => {
   }
 
   return (
-    <Container>
-      <p>타입 : {typeResult}</p>
-      <p>설명 : {typesData[typeResult].description}</p>
-      <img src={typesData[typeResult].imageUrl} alt="" />
-
+    <ResultPageContainer>
+      <Title>내 상사는 {typesData[typeResult].name}</Title>
+      <ImgBox $image={typesData[typeResult].imageUrl} />
+      <Description>{typesData[typeResult].description}</Description>
       <Button onClick={resultShare}>결과 공유하기</Button>
       <Button
         onClick={() => {
@@ -52,7 +56,7 @@ const ResultPage = () => {
       >
         테스트 다시하기
       </Button>
-    </Container>
+    </ResultPageContainer>
   )
 }
 
