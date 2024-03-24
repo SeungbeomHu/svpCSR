@@ -19,12 +19,12 @@ export const Container = styled.div`
 
 export const Button = styled.button`
   width: 80%;
-  border-radius: 10px; /* 모서리의 둥근 정도 */
-  border: 2px solid transparent; /* 초기 테두리 설정 */
-  background-color: #4164fa; /* 기본 배경색 */
-  color: white; /* 글자색 */
-  font-size: 20px; /* 글자 크기 */
-  font-weight: bold; /* 글자 두께 */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-color: #4164fa;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
   cursor: pointer; /* 마우스 오버 시 커서 모양 변경 */
   transition: all 0.3s ease-in-out; /* 상태 변화 애니메이션 */
 
