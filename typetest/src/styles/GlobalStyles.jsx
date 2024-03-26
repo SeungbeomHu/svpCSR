@@ -34,7 +34,7 @@ export const Button = styled.div`
   transition: all 0.3s ease-in-out; /* 상태 변화 애니메이션 */
 
   &:hover {
-    background-color: #3399ff; /* 호버 시 배경색 변경 */
+    background-color: #d08c1e; /* 호버 시 배경색 변경 */
   }
 `
 

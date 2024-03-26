@@ -8,7 +8,7 @@ export const TextBox = styled.div`
   margin-bottom: 40px;
 `
 export const Title = styled.div`
-  color: chocolate;
+  color: #d08c1e;
   font-size: 27px;
   font-weight: bold;
   padding: 10px;

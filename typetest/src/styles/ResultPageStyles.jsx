@@ -83,17 +83,31 @@ export const ShareTitle = styled.p`
 
 export const ShareBox = styled.div`
   display: flex;
-  width: 200px;
-  align-items: center;
   justify-content: space-between;
+  width: 250px;
 `
 
 export const ShareCircle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
+  height: 48px;
+  width: 48px;
   border-radius: 50%;
+  font-weight: 800;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  background-color: #7362ff;
+  &:hover {
+    background-color: #a99fee;
+  }
+`
+export const KakaoShareButton = styled.div`
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url("/images/kakao.png");
+  background-size: cover;
 `

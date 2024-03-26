@@ -36,7 +36,7 @@ export const AnswerBox = styled.div`
   padding: 15px 10px;
   border-radius: 30px;
   border: 2px solid transparent;
-  background-color: orange;
+  background-color: #d08c1e;
   color: white;
   font-size: 15px;
   font-weight: bold;
@@ -53,7 +53,7 @@ export const ProgressBarContainer = styled.div`
 
 export const ProgressBar = styled.div`
   height: 20px;
-  background-color: #ff9800;
+  background-color: #91562e;
   border-radius: 20px;
   width: ${(props) => props.width}%;
   transition: width 0.5s ease-in-out;
