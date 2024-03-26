@@ -17,7 +17,7 @@ import { useScript } from "../hook"
 const Share = () => {
   const KakaoKEY = process.env.REACT_APP_KAKAO_KEY
 
-  const testURL = "https://typetest-eta.vercel.app/"
+  const testURL = "https://graeseocoffe.vercel.app/"
 
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js")
 
