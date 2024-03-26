@@ -44,7 +44,7 @@ const Share = () => {
       navigator.share({
         title: "당신은 어떤 커피일까요?",
         text: "그래서커피와 함께하는 커피 유형테스트! 스타일에 맞는 커피를 알려드릴게요:)",
-        url: "http://localhost:3000",
+        url: { testURL },
       })
     } else {
       alert("주소가 복사되었습니다!")
