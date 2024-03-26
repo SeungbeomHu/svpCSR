@@ -1,28 +1,63 @@
+import { motion } from "framer-motion"
 import React from "react"
-import { Container } from "../styles/GlobalStyles"
 import {
   AnswerBox,
+  ButtonContainer,
   Question,
+  QuestionItemContainer,
   QuestionNumber,
 } from "../styles/QuestionPageStyles"
 
 const QuestionItem = ({ data, onAnswer, currentQuestionNumber }) => {
-  // 질문 및 답변 데이터
   const question = data.question
-  const firstAnswer = data.answers[0]
-  const secondAnswer = data.answers[1]
+
+  const handleAnswerClick = (answer) => {
+    onAnswer(answer.type)
+  }
+
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { x: 100, opacity: 0 },
+    show: { x: 0, opacity: 1, transition: { duration: 0.4 } },
+  }
 
   return (
-    <Container>
-      <QuestionNumber>Q{currentQuestionNumber + 1}</QuestionNumber>
-      <Question>{question}</Question>
-      <AnswerBox onClick={() => onAnswer(firstAnswer.type)}>
-        {firstAnswer.text}
-      </AnswerBox>
-      <AnswerBox onClick={() => onAnswer(secondAnswer.type)}>
-        {secondAnswer.text}
-      </AnswerBox>
-    </Container>
+    <QuestionItemContainer
+      as={motion.div}
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+    >
+      <QuestionNumber as={motion.div} variants={itemVariants}>
+        Q{currentQuestionNumber + 1}.
+      </QuestionNumber>
+      <Question as={motion.p} variants={itemVariants}>
+        {question}
+      </Question>
+      <ButtonContainer as={motion.div}>
+        {data.answers.map((answer, index) => (
+          <AnswerBox
+            key={index}
+            as={motion.div}
+            variants={itemVariants}
+            onClick={() => handleAnswerClick(answer)}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+          >
+            {answer.text}
+          </AnswerBox>
+        ))}
+      </ButtonContainer>
+    </QuestionItemContainer>
   )
 }
 

@@ -1,10 +1,12 @@
 import React from "react"
 import { useState } from "react"
 import { Button, Container } from "../styles/GlobalStyles"
-import { Title } from "../styles/MainPageStyles"
+import { CoverImg, SubTitle, TextBox, Title } from "../styles/MainPageStyles"
 import QuestionPage from "./QuestionPage"
+// import Footer from "../components/Footer"
 
 const MainPage = () => {
+  const imgURL = "/images/thumbnail.jpg"
   // 테스트 시작 여부
   const [testMode, setTestMode] = useState(false)
 
@@ -15,10 +17,16 @@ const MainPage = () => {
 
   return (
     <Container>
+      {/* <Footer /> */}
       {!testMode ? (
         <>
-          <Title>내 상사의 유형은?</Title>
-          <Button onClick={testStart}>테스트 시작하기</Button>
+          <TextBox>
+            <Title>당신은 어떤 커피인가요?</Title>
+            <SubTitle>스타일에 맞는 커피를 알려드릴게요!</SubTitle>
+          </TextBox>
+
+          <CoverImg $image={imgURL} />
+          <Button onClick={testStart}>테스트 시작하기!</Button>
         </>
       ) : (
         <QuestionPage />
