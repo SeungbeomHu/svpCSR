@@ -45,7 +45,7 @@ export const AnswerBox = styled.div`
 
 export const ProgressBarContainer = styled.div`
   width: 65%;
-  background-color: #e0e0e0;
+  background-color: #f3f3f3;
   border-radius: 20px;
   margin: 30px 0;
   position: relative;
@@ -64,13 +64,13 @@ export const ProgressText = styled.span`
   right: 10px;
   top: -30px; // 텍스트 위치 조정
   font-size: 12px;
-  color: lightgray;
+  color: #5e5e5e;
 `
 
 export const LottieTitle = styled.div`
   font-size: 18px;
   font-weight: bold;
-  color: coral;
+  color: #714e3f;
 `
 
 export const Space = styled.div`

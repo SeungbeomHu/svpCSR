@@ -8,7 +8,10 @@ export const Container = styled.div`
   margin: 0 auto;
   height: 100vh;
   width: 500px;
-  background-color: #ffffff;
+  background-image: url("/images/thumbnail.jpg");
+  background-size: 100% 100%;
+  /* background-size: cover; */
+  background-color: #fffaf6;
 
   @media (max-width: 500px) {
     max-width: 100%;
@@ -23,7 +26,7 @@ export const Button = styled.div`
   padding: 15px 10px;
   border-radius: 30px;
   border: 2px solid transparent;
-  background-color: orange;
+  background-color: #785232;
   color: white;
   font-size: 15px;
   font-weight: bold;
@@ -36,17 +39,18 @@ export const Button = styled.div`
 `
 
 export const FooterContainer = styled.div`
+  font-family: "Diphylleia-Regular";
   position: absolute;
   top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   font-style: italic;
   height: 50px;
-  color: chocolate;
+  color: #b68f6c;
   width: 70%;
   text-align: center;
   /* background-color: rgba(255, 255, 255, 0.4);

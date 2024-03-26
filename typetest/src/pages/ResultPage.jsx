@@ -16,6 +16,7 @@ import {
   Description,
 } from "../styles/ResultPageStyles"
 import { Space } from "../styles/QuestionPageStyles"
+import Instargram from "../components/Instargram"
 
 const ResultPage = () => {
   const navigate = useNavigate()
@@ -62,8 +63,8 @@ const ResultPage = () => {
 
   return (
     <ResultPageContainer>
-      <ImgBox $image={typesData[typeResult].imageUrl} />
       <DescriptionContainer>
+        <ImgBox $image={typesData[typeResult].imageUrl} />
         <Title>
           <SubTitle>당신은</SubTitle>
           <TypeName>{typesData[typeResult].name}</TypeName>
@@ -78,6 +79,7 @@ const ResultPage = () => {
           <ShareCircle>c</ShareCircle>
         </ShareBox>
       </DescriptionContainer>
+
       <Button
         onClick={() => {
           navigate("/")
@@ -85,6 +87,7 @@ const ResultPage = () => {
       >
         테스트 다시하기
       </Button>
+      <Instargram />
       <Space></Space>
     </ResultPageContainer>
   )

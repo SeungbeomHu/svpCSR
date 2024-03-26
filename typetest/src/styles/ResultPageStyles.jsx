@@ -6,9 +6,9 @@ export const ResultPageContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 100%;
   width: 500px;
-  background-color: white;
+  background-image: url("/images/thumbnail.jpg");
+  background-size: 100% 100%;
 
   @media (max-width: 500px) {
     max-width: 100%;
@@ -17,13 +17,11 @@ export const ResultPageContainer = styled.div`
 `
 
 export const ImgBox = styled.div`
-  position: relative;
   width: 100%;
-  height: 300px;
+  height: 200px;
   background-image: url(${(props) => props.$image});
   background-size: 100% 100%;
-  margin-bottom: -30px;
-  z-index: 1;
+  border-radius: 15px;
 `
 
 export const DescriptionContainer = styled.div`
@@ -35,15 +33,13 @@ export const DescriptionContainer = styled.div`
   margin: 5px;
   padding: 30px;
   border-radius: 30px;
-  margin-bottom: 50px;
+  margin: 50px 0px;
   line-height: 1.7;
-  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4),
-    0 0 5px rgba(255, 255, 255, 0.8);
-  position: relative;
-  z-index: 2;
-  top: -30px;
-  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom right, #ffffff, #f0f0f0);
   backdrop-filter: blur(4px);
+  border: 1px solid #e0e0e0;
 `
 
 export const Title = styled.div`
@@ -75,7 +71,7 @@ export const Line = styled.div`
 export const Description = styled.div`
   text-align: center;
   font-size: 17px;
-  height: 200px;
+  height: 170px;
 `
 
 export const ShareTitle = styled.p`

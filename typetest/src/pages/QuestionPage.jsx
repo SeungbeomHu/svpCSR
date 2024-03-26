@@ -38,8 +38,8 @@ const QuestionPage = () => {
     } else {
       setLoading(true) // 모든 질문이 완료되면 로딩 상태 활성화
       setTimeout(() => {
-        navigate("/result", { state: { types } }) // 2초 후 결과 페이지로 이동
-      }, 2000) // 로딩 화면 표시 시간 조정 가능
+        navigate("/result", { state: { types } }) // 결과 페이지로 이동
+      }, 3000) // 로딩 화면 표시 시간 조정 가능
     }
   }
 
