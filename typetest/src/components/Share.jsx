@@ -36,7 +36,6 @@ const Share = () => {
   const handleKakaoButton = () => {
     window.Kakao.Link.sendScrap({
       requestUrl: testURL,
-      imageUrl: `${testURL}/images/shareImg.png`,
     })
   }
 
