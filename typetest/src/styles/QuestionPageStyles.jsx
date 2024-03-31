@@ -49,7 +49,7 @@ export const AnswerBox = styled.div`
 export const ProgressBarContainer = styled.div`
   width: 65%;
   background-color: white;
-  border: 1.5px solid #4a2605;
+  border: 2px solid #4a2605;
   border-radius: 20px;
   margin: 50px 0;
   position: relative;
