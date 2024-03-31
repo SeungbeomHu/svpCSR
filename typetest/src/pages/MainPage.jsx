@@ -79,7 +79,7 @@ const MainPage = () => {
             onClick={testStart}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 1 }}
+            transition={{ duration: 0.4, delay: 1.5 }}
           >
             <div>테스트 시작하기!</div>
             <ParticipantsCount>
