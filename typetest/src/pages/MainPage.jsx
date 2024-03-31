@@ -1,7 +1,6 @@
 import React, { useLayoutEffect } from "react"
 import { useState } from "react"
 import Header from "../components/Header"
-
 import { Button, Container } from "../styles/GlobalStyles"
 import {
   ParticipantsCount,
@@ -79,7 +78,7 @@ const MainPage = () => {
             onClick={testStart}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 1.5 }}
+            transition={{ duration: 0.4, delay: 1 }}
           >
             <div>테스트 시작하기!</div>
             <ParticipantsCount>

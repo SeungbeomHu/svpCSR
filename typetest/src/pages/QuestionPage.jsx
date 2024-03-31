@@ -1,4 +1,4 @@
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useState } from "react"
 import Lottie from "react-lottie"
 import { useNavigate } from "react-router-dom"
@@ -98,7 +98,12 @@ const QuestionPage = ({ participants }) => {
   // 로딩 상태가 아니라면 질문 페이지 렌더링
   return (
     <>
-      <ProgressBarContainer>
+      <ProgressBarContainer
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <ProgressBarImg width={progressPercentage} />
         <ProgressBar width={progressPercentage} />
         <ProgressText>
