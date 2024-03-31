@@ -24,10 +24,12 @@ export const QuestionNumber = styled.div`
 `
 
 export const Question = styled.p`
-  width: 80%;
-  font-size: 17px;
+  width: 60%;
+  font-size: 22px;
   text-align: center;
   padding: 20px;
+  word-break: keep-all;
+  line-height: 1.5;
 `
 export const AnswerBox = styled.div`
   width: 60%;
@@ -35,25 +37,37 @@ export const AnswerBox = styled.div`
   margin: 10px 0px;
   padding: 15px 10px;
   border-radius: 30px;
-  border: 2px solid transparent;
-  background-color: #d08c1e;
+  border: 2px solid #4a2605;
+  background-color: #6d492c;
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  word-break: keep-all;
 `
 
 export const ProgressBarContainer = styled.div`
   width: 65%;
-  background-color: #f3f3f3;
+  background-color: white;
+  border: 1.5px solid #4a2605;
   border-radius: 20px;
-  margin: 30px 0;
+  margin: 50px 0;
   position: relative;
+`
+export const ProgressBarImg = styled.div`
+  position: absolute;
+  top: -10px;
+  height: 35px;
+  width: 42px;
+  background-size: 100% 100%;
+  background-image: url("/images/progressbar-cup.png");
+  left: ${(props) => `calc(${props.width}% - 15px)`};
+  transition: left 0.5s ease-in-out;
 `
 
 export const ProgressBar = styled.div`
   height: 20px;
-  background-color: #91562e;
+  background-color: #b37d4a;
   border-radius: 20px;
   width: ${(props) => props.width}%;
   transition: width 0.5s ease-in-out;
@@ -62,15 +76,14 @@ export const ProgressBar = styled.div`
 export const ProgressText = styled.span`
   position: absolute;
   right: 10px;
-  top: -30px; // 텍스트 위치 조정
+  top: 30px; // 텍스트 위치 조정
   font-size: 12px;
-  color: #5e5e5e;
+  color: black;
 `
 
 export const LottieTitle = styled.div`
   font-size: 18px;
   font-weight: bold;
-  color: #714e3f;
 `
 
 export const Space = styled.div`

@@ -4,40 +4,49 @@ export const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   padding: 10px;
   margin-bottom: 40px;
 `
+
+export const TitleImg = styled.div`
+  width: 100px;
+  height: 160px;
+  background-image: url("/images/cup.png");
+  background-size: 100% 100%;
+`
 export const Title = styled.div`
-  color: #d08c1e;
-  font-size: 27px;
-  font-weight: bold;
+  font-size: 30px;
   padding: 10px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 `
 export const SubTitle = styled.div`
   font-size: 15px;
-  color: gray;
-  margin: 10px 0;
+  color: black;
+  margin: 5px 0;
 `
 export const LogoContainer = styled.div`
-  width: 150px;
-  margin-top: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   cursor: pointer; /* 마우스 오버 시 커서 모양 변경 */
 `
 export const InstagramLogo = styled.div`
   background-image: url("/images/instagram.png");
   background-size: 100% 100%;
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
 `
 export const LogoDescription = styled.div`
-  width: 105px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 15px;
-  text-decoration: underline;
-  text-underline-position: under;
+  font-size: 20px;
+`
+
+export const ParticipantsCount = styled.div`
+  margin-top: 10px;
+  font-size: 13px !important;
 `

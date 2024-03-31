@@ -7,8 +7,9 @@ export const ResultPageContainer = styled.div`
   align-items: center;
   margin: 0 auto;
   width: 500px;
+  /* background-color: #eaddc6; */
   background-image: url("/images/thumbnail.jpg");
-  background-size: 100% 100%;
+  background-size: 100%;
 
   @media (max-width: 500px) {
     max-width: 100%;
@@ -17,11 +18,11 @@ export const ResultPageContainer = styled.div`
 `
 
 export const ImgBox = styled.div`
-  width: 100%;
-  height: 200px;
+  width: 240px;
+  height: 300px;
   background-image: url(${(props) => props.$image});
   background-size: 100% 100%;
-  border-radius: 15px;
+  margin-bottom: 20px;
 `
 
 export const DescriptionContainer = styled.div`
@@ -30,16 +31,13 @@ export const DescriptionContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 70%;
-  margin: 5px;
   padding: 30px;
   border-radius: 30px;
-  margin: 50px 0px;
+  margin-top: 50px;
+  margin-bottom: 25px;
   line-height: 1.7;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  background-image: linear-gradient(to bottom right, #ffffff, #f0f0f0);
-  backdrop-filter: blur(4px);
-  border: 1px solid #e0e0e0;
+  background-color: #ebdcc5c7;
+  border: 1px solid #a79180;
 `
 
 export const Title = styled.div`
@@ -48,7 +46,7 @@ export const Title = styled.div`
   align-items: center;
   text-align: center;
   font-weight: bold;
-  height: 150px;
+  height: 130px;
 `
 
 export const SubTitle = styled.div`
@@ -57,34 +55,75 @@ export const SubTitle = styled.div`
 `
 
 export const TypeName = styled.div`
-  font-size: 35px;
+  font-size: 25px;
   padding: 10px;
-  color: orange;
+  color: #785232;
 `
 
 export const Line = styled.div`
-  background-color: #fde5ca;
-  width: 30px;
-  height: 5px;
+  background-color: #bb7e4d;
+  width: 100%;
+  height: 3px;
 `
 
 export const Description = styled.div`
-  text-align: center;
+  text-align: left;
   font-size: 17px;
-  height: 170px;
+  word-break: keep-all;
+`
+export const MatchTypeContainerTitle = styled.div`
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #785232;
+`
+export const MatchTypeContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+`
+
+export const MatchTypeItem = styled.div`
+  width: 30%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-break: keep-all;
+  text-align: center;
+  background-color: #ffffff63;
+  border-radius: 10px;
+`
+
+export const MatchTypeItemImg = styled.img`
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  margin-bottom: 15px;
+`
+
+export const MatchTypeItemText = styled.div`
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  font-weight: bolder;
+  color: #785232;
 `
 
 export const ShareTitle = styled.p`
   font-size: 17px;
   font-weight: bolder;
   text-align: center;
-  color: orange;
+  color: white;
 `
 
 export const ShareBox = styled.div`
   display: flex;
   justify-content: space-between;
   width: 250px;
+  margin-bottom: 25px;
 `
 
 export const ShareCircle = styled.div`

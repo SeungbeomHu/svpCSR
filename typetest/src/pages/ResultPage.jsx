@@ -12,6 +12,11 @@ import {
   Line,
   DescriptionContainer,
   Description,
+  MatchTypeContainer,
+  MatchTypeItem,
+  MatchTypeItemImg,
+  MatchTypeItemText,
+  MatchTypeContainerTitle,
 } from "../styles/ResultPageStyles"
 import { Space } from "../styles/QuestionPageStyles"
 import Instargram from "../components/Instargram"
@@ -36,13 +41,16 @@ const ResultPage = () => {
 
   // 유형 정의 함수
   const defineType = (types) => {
-    if (!types || Object.keys(types).length === 0) return null
+    if (!types) return ""
 
-    // 객체의 키-값 쌍에서 가장 높은 값을 가진 키를 찾습니다.
-    let highestType = Object.keys(types).reduce((a, b) =>
-      types[a] > types[b] ? a : b
-    )
-    return highestType // 가장 높은 카운트를 가진 메뉴 유형 반환
+    const mbti = [
+      types.E > types.I ? "E" : "I",
+      types.S > types.N ? "S" : "N",
+      types.F > types.T ? "F" : "T",
+      types.P > types.J ? "P" : "J",
+    ].join("")
+
+    return mbti
   }
 
   // 유형 결과(함수 실행)
@@ -52,22 +60,45 @@ const ResultPage = () => {
   const resultData = typesData[typeResult]
   const imageUrl = resultData?.imageUrl || ""
   const typeName = resultData?.name || ""
+  const typeNameText = resultData?.name_text || ""
   const description = resultData?.description || ""
+  const matchType = resultData?.match || ""
 
   return (
     <ResultPageContainer>
       <DescriptionContainer>
         <ImgBox $image={imageUrl} />
         <Title>
-          <SubTitle>당신은</SubTitle>
+          <SubTitle>당신은 {typeNameText}</SubTitle>
           <TypeName>{typeName}</TypeName>
-          <Line></Line>
         </Title>
-        <Description>{description}</Description>
-        <ShareTitle>친구에게 테스트 공유하기!</ShareTitle>
-        <Share />
+        <Line></Line>
+        <Description>
+          {description.map((desc, index) => (
+            <p key={index}>- {desc}</p>
+          ))}
+        </Description>
+        <Line></Line>
+        <MatchTypeContainerTitle>함께하면 좋은 조합</MatchTypeContainerTitle>
+        <MatchTypeContainer>
+          <MatchTypeItem>
+            <MatchTypeItemImg src={typesData[matchType[0]].imageUrl} alt="" />
+            <MatchTypeItemText>
+              {typesData[matchType[0]].name}
+            </MatchTypeItemText>
+          </MatchTypeItem>
+
+          <MatchTypeItem>
+            <MatchTypeItemImg src={typesData[matchType[1]].imageUrl} alt="" />
+            <MatchTypeItemText>
+              {typesData[matchType[1]].name}
+            </MatchTypeItemText>
+          </MatchTypeItem>
+        </MatchTypeContainer>
       </DescriptionContainer>
 
+      <ShareTitle>친구에게 테스트 공유하기!</ShareTitle>
+      <Share />
       <Button
         onClick={() => {
           navigate("/")
