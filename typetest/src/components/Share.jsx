@@ -42,8 +42,7 @@ const Share = () => {
   const linkShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: "당신은 어떤 커피일까요?",
-        // text: "그래서커피와 함께하는 커피 유형테스트! 스타일에 맞는 커피를 알려드릴게요:)",
+        title: "카페 음료테스트",
         url: { testURL },
       })
     } else {
