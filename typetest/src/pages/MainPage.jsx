@@ -18,6 +18,7 @@ import { motion } from "framer-motion"
 const MainPage = () => {
   const [testMode, setTestMode] = useState(false)
   const [participants, setParticipants] = useState(0)
+  const [animationPlayed, setAnimationPlayed] = useState(false)
 
   useEffect(() => {
     const participantsRef = ref(database, "participants")
@@ -26,6 +27,13 @@ const MainPage = () => {
       setParticipants(data ? data.count : 0)
     })
   }, [])
+
+  useEffect(() => {
+    // 첫 렌더링에서만 애니메이션 상태를 true로 설정
+    if (!animationPlayed) {
+      setAnimationPlayed(true)
+    }
+  }, [animationPlayed])
 
   const testStart = () => {
     setTestMode(true)
@@ -78,7 +86,7 @@ const MainPage = () => {
             as={motion.div}
             onClick={testStart}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={animationPlayed ? { opacity: 1 } : {}}
             transition={{ duration: 0.4, delay: 1 }}
           >
             <div>테스트 시작하기!</div>
