@@ -15,7 +15,6 @@ import { ref, onValue } from "firebase/database"
 import { motion } from "framer-motion"
 
 const MainPage = () => {
-  const [testMode, setTestMode] = useState(false)
   const [participants, setParticipants] = useState(0)
 
   useLayoutEffect(() => {
@@ -25,6 +24,8 @@ const MainPage = () => {
       setParticipants(data ? data.count : 0)
     })
   }, [])
+
+  const [testMode, setTestMode] = useState(false)
 
   const testStart = () => {
     setTestMode(true)
@@ -75,10 +76,10 @@ const MainPage = () => {
           </TextBox>
           <Button
             as={motion.div}
-            onClick={testStart}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 1 }}
+            onClick={testStart}
           >
             <div>테스트 시작하기!</div>
             <ParticipantsCount>

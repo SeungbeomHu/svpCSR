@@ -44,6 +44,9 @@ export const AnswerBox = styled.div`
   font-weight: bold;
   cursor: pointer;
   word-break: keep-all;
+  &:hover {
+    background-color: #ae7533; /* 호버 시 배경색 변경 */
+  }
 `
 
 export const ProgressBarContainer = styled.div`

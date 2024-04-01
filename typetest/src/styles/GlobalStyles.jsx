@@ -29,7 +29,6 @@ export const Button = styled.div`
   font-size: 20px;
   font-weight: bold;
   cursor: pointer; /* 마우스 오버 시 커서 모양 변경 */
-  transition: all 0.3s ease-in-out; /* 상태 변화 애니메이션 */
 
   &:hover {
     background-color: #ae7533; /* 호버 시 배경색 변경 */
