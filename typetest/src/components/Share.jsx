@@ -43,7 +43,7 @@ const Share = () => {
     if (navigator.share) {
       navigator.share({
         title: "카페 음료테스트",
-        url: { testURL },
+        url: testURL,
       })
     } else {
       alert("주소가 복사되었습니다!")
