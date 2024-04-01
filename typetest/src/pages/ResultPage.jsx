@@ -61,8 +61,12 @@ const ResultPage = () => {
   const imageUrl = resultData?.imageUrl || ""
   const typeName = resultData?.name || ""
   const typeNameText = resultData?.name_text || ""
-  const description = resultData?.description || ""
+  const description = resultData?.description || []
   const matchType = resultData?.match || ""
+  const matchFirstTypeName = typesData[matchType[0]]?.name || ""
+  const matchSecondTypeName = typesData[matchType[1]]?.name || ""
+  const matchFirstTypeImg = typesData[matchType[0]]?.imageUrl || ""
+  const matchSecondTypeImg = typesData[matchType[1]]?.imageUrl || ""
 
   return (
     <ResultPageContainer>
@@ -82,17 +86,13 @@ const ResultPage = () => {
         <MatchTypeContainerTitle>함께하면 좋은 조합</MatchTypeContainerTitle>
         <MatchTypeContainer>
           <MatchTypeItem>
-            <MatchTypeItemImg src={typesData[matchType[0]].imageUrl} alt="" />
-            <MatchTypeItemText>
-              {typesData[matchType[0]].name}
-            </MatchTypeItemText>
+            <MatchTypeItemImg src={matchFirstTypeImg} alt="" />
+            <MatchTypeItemText>{matchFirstTypeName}</MatchTypeItemText>
           </MatchTypeItem>
 
           <MatchTypeItem>
-            <MatchTypeItemImg src={typesData[matchType[1]].imageUrl} alt="" />
-            <MatchTypeItemText>
-              {typesData[matchType[1]].name}
-            </MatchTypeItemText>
+            <MatchTypeItemImg src={matchSecondTypeImg} alt="" />
+            <MatchTypeItemText>{matchSecondTypeName}</MatchTypeItemText>
           </MatchTypeItem>
         </MatchTypeContainer>
       </DescriptionContainer>
