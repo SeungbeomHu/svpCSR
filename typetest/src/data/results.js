@@ -38,7 +38,7 @@ const results = {
       "새로운 것보다는 안정적이고 익숙한 것을 좋아해요.",
       "겉으론 티가 잘 안 나지만, 마음속으로는 많은 감정 변화가 있어요.",
     ],
-    imageUrl: "/images/menu/espresso-removebg.png",
+    imageUrl: "/images/menu/cappuccino.png",
     match: ["ESFP", "ESTP"],
   },
   ISFP: {
