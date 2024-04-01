@@ -19,7 +19,7 @@ const Share = () => {
 
   const testURL = "https://graeseocoffe.vercel.app"
 
-  const status = useScript("https://developers.kakao.com/sdk/js/kakao.js")
+  const status = useScript(" https://t1.kakaocdn.net/kakao_js_sdk/v1/kakao.js")
 
   // kakao sdk 초기화하기
   // status가 변경될 때마다 실행되며, status가 ready일 때 초기화를 시도
