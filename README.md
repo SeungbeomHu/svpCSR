@@ -2,7 +2,7 @@
 
 ![README](https://github.com/KJH0406/typetest/assets/109582129/d9e4c633-a2da-4058-b432-1bccfd48d1de)
 
-### [테스트 하러가기(Click!)](https://graeseocoffe.vercel.app/)
+### [테스트 하러가기(Click!)](https://graeseocoffee.vercel.app/)
 
 <hr>
 
