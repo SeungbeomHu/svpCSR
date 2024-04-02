@@ -51,6 +51,12 @@ export const AnswerBox = styled.div`
       background-color: #ae7533;
     }
   }
+
+  @media (max-width: 500px) {
+    &:active {
+      background-color: #ae7533;
+    }
+  }
 `
 
 export const ProgressBarContainer = styled.div`
