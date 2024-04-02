@@ -44,8 +44,12 @@ export const AnswerBox = styled.div`
   font-weight: bold;
   cursor: pointer;
   word-break: keep-all;
-  &:hover {
-    background-color: #ae7533; /* 호버 시 배경색 변경 */
+
+  // 모바일에서 hover 효과 미적용
+  @media (hover: hover) {
+    &:hover {
+      background-color: #ae7533;
+    }
   }
 `
 
