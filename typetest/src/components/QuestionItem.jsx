@@ -50,9 +50,9 @@ const QuestionItem = ({ data, onAnswer, currentQuestionNumber }) => {
       initial="hidden"
       animate={controls}
     >
-      <QuestionNumber as={motion.div} variants={itemVariants}>
+      {/* <QuestionNumber as={motion.div} variants={itemVariants}>
         Q{currentQuestionNumber + 1}.
-      </QuestionNumber>
+      </QuestionNumber> */}
       <Question as={motion.p} variants={itemVariants}>
         {question}
       </Question>

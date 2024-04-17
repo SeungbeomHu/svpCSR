@@ -41,7 +41,7 @@ export const AnswerBox = styled.div`
   background-color: #6d492c;
   color: white;
   font-size: 16px;
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: pointer;
   word-break: keep-all;
 

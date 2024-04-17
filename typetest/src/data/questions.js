@@ -2,7 +2,7 @@ const questions = [
   {
     question: "내가 즐겨 찾는 카페 유형은?",
     answers: [
-      { text: "조용하고 나만 알 것 같은 분위기의 소규모 카페", type: "I" },
+      { text: "조용하고 나만 알 것 같은 분위기의 카페", type: "I" },
       { text: "SNS에서 유명한 핫 플레이스 카페", type: "E" },
     ],
   },

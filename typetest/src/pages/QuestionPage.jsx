@@ -106,9 +106,9 @@ const QuestionPage = ({ participants }) => {
       >
         <ProgressBarImg width={progressPercentage} />
         <ProgressBar width={progressPercentage} />
-        <ProgressText>
+        {/* <ProgressText>
           {currentQuestionIndex + 1} / {questions.length}
-        </ProgressText>
+        </ProgressText> */}
       </ProgressBarContainer>
       <AnimatePresence mode="wait">
         {questions.length > 0 && currentQuestionIndex < questions.length && (
