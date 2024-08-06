@@ -42,7 +42,7 @@ const Share = () => {
   const linkShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: "카페 음료테스트",
+        title: "나에게 맞는 코딩언어는?",
         url: testURL,
       })
     } else {

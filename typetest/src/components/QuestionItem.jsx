@@ -24,7 +24,7 @@ const QuestionItem = ({ data, onAnswer, currentQuestionNumber }) => {
   const handleAnswerClick = (answer) => {
     if (isAcitve) {
       // 클릭이 가능한 경우에만 onAnswer 호출
-      onAnswer(answer.type)
+      onAnswer(answer.type,answer.cnt)
     }
   }
 

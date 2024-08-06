@@ -26,7 +26,6 @@ const Instargram = ({ animate }) => {
             window.open(cafeURL)
           }}
         >
-          <span>카페 구경하기!</span>
         </LogoDescription>
       </LogoContainer>
     </Button>

@@ -10,20 +10,20 @@ import {
   TitleImg,
 } from "../styles/MainPageStyles"
 import QuestionPage from "./QuestionPage"
-import { database } from "../firebase-config"
-import { ref, onValue } from "firebase/database"
+// import { database } from "../firebase-config"
+// import { ref, onValue } from "firebase/database"
 import { motion } from "framer-motion"
 
 const MainPage = () => {
   const [participants, setParticipants] = useState(0)
 
-  useLayoutEffect(() => {
-    const participantsRef = ref(database, "participants")
-    onValue(participantsRef, (snapshot) => {
-      const data = snapshot.val()
-      setParticipants(data ? data.count : 0)
-    })
-  }, [])
+  // useLayoutEffect(() => {
+  //   const participantsRef = ref(database, "participants")
+  //   onValue(participantsRef, (snapshot) => {
+  //     const data = snapshot.val()
+  //     setParticipants(data ? data.count : 0)
+  //   })
+  // }, [])
 
   const [testMode, setTestMode] = useState(false)
 
@@ -55,7 +55,7 @@ const MainPage = () => {
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <div>나와 어울리는</div>
-              <div>카페 음료는 무엇일까요?</div>
+              <div>코딩 언어는 무엇일까요?</div>
             </Title>
             <SubTitle
               as={motion.div}
@@ -63,7 +63,7 @@ const MainPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.5 }}
             >
-              그래서커피와 함께하는 카페 음료테스트!
+              SVP 1조와 함께하는 나만의 코딩 언어 찾기!
             </SubTitle>
             <SubTitle
               as={motion.div}
@@ -71,7 +71,7 @@ const MainPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.7 }}
             >
-              자신의 스타일에 맞는 메뉴를 알려드릴게요 :)
+              자신의 스타일에 맞는 코딩 언어를 알려드릴게요:)
             </SubTitle>
           </TextBox>
           <Button
@@ -82,9 +82,6 @@ const MainPage = () => {
             onClick={testStart}
           >
             <div>테스트 시작하기!</div>
-            <ParticipantsCount>
-              지금까지 {participants}명이 참여했어요
-            </ParticipantsCount>
           </Button>
         </>
       ) : (

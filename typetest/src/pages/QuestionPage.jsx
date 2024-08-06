@@ -13,8 +13,8 @@ import {
 } from "../styles/QuestionPageStyles"
 import animationData from "../data/Loading.json"
 import { Container } from "../styles/GlobalStyles"
-import { database } from "../firebase-config"
-import { ref, set } from "firebase/database"
+// import { database } from "../firebase-config"
+// import { ref, set } from "firebase/database"
 
 const QuestionPage = ({ participants }) => {
   const navigate = useNavigate()
@@ -22,37 +22,36 @@ const QuestionPage = ({ participants }) => {
   // 로딩 상태 추가
   const [loading, setLoading] = useState(false)
 
+  const [cnt, setcnt] = useState(0)
   // 질문과 유형 상태
   const [types, setTypes] = useState({
-    E: 0,
-    I: 0,
-    S: 0,
-    N: 0,
-    F: 0,
-    T: 0,
-    J: 0,
-    P: 0,
+    C:0,
+    P:0,
+    J:0,
+    R:0,
   })
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
 
   // 참여자 수 증가 함수
-  const addParticipant = () => {
-    const participantsRef = ref(database, "participants")
-    set(participantsRef, { count: participants + 1 })
-      .then()
-      .catch((error) => console.error("참가자 수 업데이트 실패:", error))
-  }
+  // const addParticipant = () => {
+  //   const participantsRef = ref(database, "participants")
+  //   set(participantsRef, { count: participants + 1 })
+  //     .then()
+  //     .catch((error) => console.error("참가자 수 업데이트 실패:", error))
+  // }
 
-  const handleAnswer = (type) => {
+  const handleAnswer = (type,cnt) => {
+
+    console.log(cnt)
     setTypes((prevTypes) => ({
       ...prevTypes,
-      [type]: prevTypes[type] + 1,
+      [type]: prevTypes[type] + cnt,
     }))
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1)
     } else {
-      addParticipant() // 참여자 수 증가
+      //addParticipant() // 참여자 수 증가
       setLoading(true) // 모든 질문이 완료되면 로딩 상태 활성화
       setTimeout(() => {
         navigate("/result", { state: { types } }) // 결과 페이지로 이동

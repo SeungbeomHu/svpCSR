@@ -20,7 +20,6 @@ import {
 } from "../styles/ResultPageStyles"
 import { Space } from "../styles/QuestionPageStyles"
 import Instargram from "../components/Instargram"
-import Share from "../components/Share"
 
 const ResultPage = () => {
   const navigate = useNavigate()
@@ -43,14 +42,15 @@ const ResultPage = () => {
   const defineType = (types) => {
     if (!types) return ""
 
-    const mbti = [
-      types.E > types.I ? "E" : "I",
-      types.S > types.N ? "S" : "N",
-      types.F > types.T ? "F" : "T",
-      types.P > types.J ? "P" : "J",
-    ].join("")
 
-    return mbti
+    console.log(types)
+
+
+    const res = types.C > types.P ? "C" : types.P > types.J ? "P" : types.J > types.R? "J" : "R"
+
+
+
+    return res
   }
 
   // 유형 결과(함수 실행)
@@ -83,22 +83,10 @@ const ResultPage = () => {
           ))}
         </Description>
         <Line></Line>
-        <MatchTypeContainerTitle>함께하면 좋은 조합</MatchTypeContainerTitle>
-        <MatchTypeContainer>
-          <MatchTypeItem>
-            <MatchTypeItemImg src={matchFirstTypeImg} alt="" />
-            <MatchTypeItemText>{matchFirstTypeName}</MatchTypeItemText>
-          </MatchTypeItem>
 
-          <MatchTypeItem>
-            <MatchTypeItemImg src={matchSecondTypeImg} alt="" />
-            <MatchTypeItemText>{matchSecondTypeName}</MatchTypeItemText>
-          </MatchTypeItem>
-        </MatchTypeContainer>
       </DescriptionContainer>
 
-      <ShareTitle>친구에게 테스트 공유하기!</ShareTitle>
-      <Share />
+
       <Button
         onClick={() => {
           navigate("/")
@@ -106,7 +94,6 @@ const ResultPage = () => {
       >
         테스트 다시하기
       </Button>
-      <Instargram />
       <Space></Space>
     </ResultPageContainer>
   )
