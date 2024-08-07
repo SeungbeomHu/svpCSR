@@ -11,7 +11,7 @@ export const TextBox = styled.div`
 
 export const TitleImg = styled.div`
   width: 100px;
-  height: 160px;
+  height: 120px;
   background-image: url("/images/cup.png");
   background-size: 100% 100%;
 `
